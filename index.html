@@ -5,54 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de Texto</title>
+    <link rel="shortcut icon" href="img/Logo.png" type="img/x-icon"/>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:ital,wght@0,600;1,100&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    
-    <div class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><a  href="https://www.aluracursos.com/" target="_blank"><li><img src="img/Logo.png" alt="Logo alura latam" class="logo"></a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="logo">
-            <a href="https://www.oracle.com/mx/education/oracle-next-education/" target="_blank">
-                <img src="img/Logo.png" alt="Logo" width="25">
-            </a>
-        </div>
+    <main>
+        <section class="encriptar">
+            <textarea class="texto" name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto Aqui"></textarea>
+            <p class="terminos">&#9432; Solo letras minúsculas y sin acéntos.</p>
+            <div class="contenedor-botones">
+                <button class="btn-encriptar" onclick="encriptar()" onclick="cambiarBotones()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="desencriptar()" onclick="cambiarBotones()">Desencriptar</button>
+                <button class="btn-copiar" id="boton-copiar" onclick="copiar()" onclick="cambiarBotones()" style="display:none">Copiar texto</button>
+              </div>
+              
+            </div>
+        </section>
 
-        <div class="encriptar">
-
-            <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto Aqui"></textarea>
-
-        <div class="terminos">
-
-            <p> &#9432; Solo letras minúsculas y sin acéntos.</p>
-
-        </div>
-        
-        <div class="botones">
-
-            <button class="btn-encriptar" type="button" onclick ="encriptar()">Encriptar</button>
-            <button class="btn-desencriptar" type="button" onclick ="desencriptar()">Desencriptar</button>
-
-        </div>
-    
-        </div>
-
-        <div class="encriptado">
-
+        <section class="encriptado">
             <img src="img/munheco.png" alt="" id="munheco">
+            <div class="mensaje-encriptado" id="mensaje-encriptado">
+                <h2 id="titulo-mensaje">Ningun mensaje encontrado</h2>
+                <p id="parrafo">Ingrese el texto que desea encriptar</p>
+            </div>
+        </section>
+    </main>
 
-        <div class="mensaje-encriptado" id="mensaje-encriptado">
-            
-            <h2 id="titulo-mensaje">Ningun mensaje encontrado</h2>
-            <p id="parrafo">Ingrese el texto que desea encriptar</p>
-            
-        </div>
-        
-        </div>
-
-    </div>
+    <script src="index.js"></script>
 </body>
-
-<script src="index.js"></script>
-
-</html>
